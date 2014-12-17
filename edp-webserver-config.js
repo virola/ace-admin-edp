@@ -7,6 +7,41 @@ exports.getLocations = function () {
             location: /\/$/, 
             handler: home( 'index.html' )
         },
+        {
+            location: function (request) {
+
+                var pathname = request.pathname;
+                var extname = path.extname(pathname);
+
+                pathname = extname 
+                     ? path.basename(pathname, extname) : pathname;
+
+                var handlerPath = path.join(
+                     exports.documentRoot, 'tmp', pathname
+                );
+
+                return fs.existsSync(handlerPath + '.js');
+        
+            },
+            handler: [function (context) {
+
+                var request = context.request;
+                var pathname = request.pathname;
+                var extname = path.extname(pathname);
+
+                pathname = extname 
+                    ? path.basename(pathname, extname) : pathname;
+
+                var handlerPath = path.join(
+                    exports.documentRoot, 'mock', pathname
+                );
+
+                var handler = require(handlerPath + '.js');
+
+                handler.execute(context);
+
+            }]
+        },
         { 
             location: /^\/redirect-local/, 
             handler: redirect('redirect-target', false) 

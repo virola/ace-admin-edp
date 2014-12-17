@@ -51,8 +51,8 @@ define(
                     require('er').start();
                 });
 
-                account.on('loadfailed', function () {
-                    // error(1003);
+                account.on('loaderror', function () {
+                    console.log('load error');
                 });
 
                 // 加载账户信息
