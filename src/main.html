@@ -1,0 +1,256 @@
+<!-- target: userinfo -->
+<div class="navbar-buttons navbar-header pull-right" role="navigation">
+    <ul class="nav ace-nav">
+
+        <li class="purple hide">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                <span class="badge badge-important">8</span>
+            </a>
+
+            <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header">
+                    <i class="ace-icon fa fa-exclamation-triangle"></i>
+                    8 条新通知
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+                                用户评论
+                            </span>
+                            <span class="pull-right badge badge-info">+12</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="pull-left">    
+                            <i class="btn btn-xs btn-primary fa fa-user"></i>
+                            活动已结束，请编辑活动回顾
+                        </span>
+                        <span class="pull-right badge badge-success">+12</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+                                活动已审核通过
+                            </span>
+                            <span class="pull-right badge badge-success">1</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="dropdown-footer">
+                    <a href="#">
+                        查看所有消息
+                        <i class="ace-icon fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="green">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+                <span class="badge badge-success">5</span>
+            </a>
+
+            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header">
+                    <i class="ace-icon fa fa-envelope-o"></i>
+                    5 条新消息
+                </li>
+
+                <li class="dropdown-content">
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <li>
+                            <a href="#">
+                                <img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+                                <span class="msg-body">
+                                    <span class="msg-title">
+                                        <span class="blue">有味活动管理员:</span>
+                                        您的活动《啊八戒考试范围日》审核不通过...
+                                    </span>
+
+                                    <span class="msg-time">
+                                        <i class="ace-icon fa fa-clock-o"></i>
+                                        <span>刚刚</span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown-footer">
+                    <a href="inbox.html">
+                        查看所有消息
+                        <i class="ace-icon fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="light-blue">
+            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <img class="nav-user-photo" src="assets/avatars/avatar2.png" alt="Photo" />
+                <span class="user-info">
+                    <small>欢迎您,</small>
+                    咖啡之翼
+                </span>
+
+                <i class="ace-icon fa fa-caret-down"></i>
+            </a>
+
+            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                <li>
+                    <a href="#">
+                        <i class="ace-icon fa fa-cog"></i>
+                        设置
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <i class="ace-icon fa fa-user"></i>
+                        资料
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="#">
+                        <i class="ace-icon fa fa-power-off"></i>
+                        退出
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- target:nav -->
+<div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        //try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+            <span class="sr-only">收起/打开侧边栏</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="fa fa-leaf"></i>
+                    有味商家中心
+                </small>
+            </a>
+        </div>
+
+        <!-- import: userinfo -->
+    </div><!-- /.navbar-container -->
+</div>
+
+<!-- target:side -->
+<div id="sidebar" class="sidebar responsive">
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+    </script>
+
+    <ul class="nav nav-list">
+        <li class="">
+            <a href="#">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text">有味首页</span>
+            </a>
+
+            <b class="arrow"></b>
+        </li>
+
+        <li class="active open">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon fa fa-calendar"></i>
+                <span class="menu-text">我的活动</span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+                <li class="">
+                    <a href="#act/create">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        发布活动
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="#act/list">
+                    <a href="list.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        活动管理
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="#act/review">
+                    <a href="review.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        活动回顾
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+                <li class="#act/comment">
+                    <a href="review.html">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        评价管理
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+
+    </ul><!-- /.nav-list -->
+
+    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+        <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div>
+
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+    </script>
+</div>
+
+<!-- master: main -->
+<!-- import: nav -->
+
+<div class="main-container" id="main-container">
+    <!-- import: side -->
+    <div class="main-content">
+        <!-- contentplaceholder: mainContent -->
+    </div>
+</div>

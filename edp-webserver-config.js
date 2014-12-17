@@ -1,6 +1,10 @@
 exports.port = 8848;
 exports.directoryIndexes = true;
 exports.documentRoot = __dirname;
+
+var path = require('path');
+var fs = require('fs');
+
 exports.getLocations = function () {
     return [
         { 
@@ -33,7 +37,7 @@ exports.getLocations = function () {
                     ? path.basename(pathname, extname) : pathname;
 
                 var handlerPath = path.join(
-                    exports.documentRoot, 'mock', pathname
+                    exports.documentRoot, 'tmp', pathname
                 );
 
                 var handler = require(handlerPath + '.js');

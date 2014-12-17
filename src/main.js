@@ -1,11 +1,8 @@
 define(
     function(require) {
 
-        // 提前引入公共控件
-        // require('common/require-ui');
-
         // 提前引入公共模板
-        require('common/require-tpl');
+        require('er/tpl!./main.html');
 
         /**
          * 处理AJAX公用参数userId和nestId
@@ -18,14 +15,12 @@ define(
             ajax.hooks.beforeExecute = function (options) {
 
                 var userId = account.getUserId();
-                var nestId = account.getUserNestId();
 
                 if (options.method === 'POST') {
                     options.url = ''
                         + options.url
                         + ((options.url.indexOf('?') < 0) ? '?' : '&')
                         + 'userId=' + userId
-                        + '&nestId=' + nestId
                         + '&isAjax=1';
                 }
 
@@ -45,7 +40,9 @@ define(
 
                 account.on('loaded', function() {
 
-                    hookAjax(account);
+                    // hookAjax(account);
+                    
+                    require('config');
 
                     // 启动er
                     require('er').start();
@@ -56,7 +53,7 @@ define(
                 });
 
                 // 加载账户信息
-                account.loadUserInfo();
+                account.load();
             }
         };
 
